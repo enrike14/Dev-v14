@@ -175,7 +175,7 @@ class electronic_invoice_fields(models.Model):
         string="PDF Tipo Emisión", store="True")
     api_token = fields.Char(string="ApiToken")
     puntoFacturacion = fields.Char(
-        string="Punto Fac", store="True")
+        string="Punto Fac", store="True", default='')
 
     @api.depends('qr_code')
     def on_change_pago(self):
