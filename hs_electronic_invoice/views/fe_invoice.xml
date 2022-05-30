@@ -22,7 +22,7 @@
 		</xpath>
 		
 		<xpath expr="//field[@name='move_type']" position="before" >
-			<field name="qr_code" widget='image' attrs="{'invisible': [('pdfNumber','=','False')]}" class="oe_avatar"/>				
+			<field name="qr_code" widget='image' attrs="{'invisible': [('pdfNumber','=',False)]}" class="oe_avatar"/>				
 		</xpath>
 
 		<xpath expr="//field[@name='journal_id']" position="after" >
