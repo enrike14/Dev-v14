@@ -50,7 +50,7 @@ class PosOrder(models.Model):
                 if config_document_obj:
                     isPos = config_document_obj.pos_module
                     order.include_pos = str(isPos)
-
+                logging.info(isPos)
                 if str(isPos) == 'True':
                     order.account_move.send_fiscal_doc()
                     time.sleep(4)
