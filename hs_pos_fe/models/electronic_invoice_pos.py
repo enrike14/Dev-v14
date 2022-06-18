@@ -40,6 +40,7 @@ class PosOrder(models.Model):
         self.qr_code = qr_image
 
     def action_pos_order_invoice(self):
+        logging.info("ENTRÖ AL ACTION POR LO MENOS")
         act_window = super(PosOrder, self).action_pos_order_invoice()
         for order in self:
             if order.account_move and order.account_move.type == 'out_invoice':
