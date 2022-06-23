@@ -39,6 +39,11 @@ class PosOrder(models.Model):
         qr_image = base64.b64encode(temp.getvalue())
         self.qr_code = qr_image
 
+    def _generate_pos_order_invoice(self):
+        logging.info("ENTRÖ AL ACTION POR LO MENOS::::::::::POS ORDER")
+        act_window = super(PosOrder, self)._generate_pos_order_invoice()
+        return act_window
+
     def action_pos_order_invoice(self):
         logging.info("ENTRÖ AL ACTION POR LO MENOS::::::::::")
         act_window = super(PosOrder, self).action_pos_order_invoice()
