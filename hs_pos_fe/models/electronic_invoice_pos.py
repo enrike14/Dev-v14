@@ -48,7 +48,7 @@ class PosOrder(models.Model):
         logging.info("ENTRÖ AL ACTION POR LO MENOS::::::::::")
         act_window = super(PosOrder, self).action_pos_order_invoice()
         for order in self:
-            if order.account_move and order.account_move.type == 'out_invoice':
+            if order.account_move and order.account_move.move_type == 'out_invoice':
 
                 # constultamos el objeto de nuestra configuración del servicio
                 config_document_obj = self.env["electronic.invoice"].search(
